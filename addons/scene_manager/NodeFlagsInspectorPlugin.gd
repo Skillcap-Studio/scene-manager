@@ -4,8 +4,9 @@ var SingletonCheckProperty = load('res://addons/scene_manager/SingletonCheckProp
 var SingletonNameProperty = load('res://addons/scene_manager/SingletonNameProperty.gd')
 
 
-func _can_handle(object: Object) -> bool:
-	return object is Node
+func _can_handle(object: Variant):
+	return false
+	#return object is Node
 
 
 func _parse_begin(object: Object):
